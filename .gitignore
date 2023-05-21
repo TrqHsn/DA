@@ -475,10 +475,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-
-#my custo ignore
-ui\node_modules
-ui\.vscode
-ui\angular
-ui\node_modules
