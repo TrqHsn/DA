@@ -1,22 +1,22 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="#">DA</a>
+        <a class="navbar-brand" routerLink="/" routerLinkActive="active">DA</a>
 
 
         <ul class="navbar-nav me-auto" *ngIf="accountService.currentUser$ | async">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" routerLink="/members" routerLinkActive="active">Matches</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Lists</a>
+                <a class="nav-link" routerLink="/lists" routerLinkActive="active">Lists</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">Message</a>
+                <a class="nav-link" routerLink="/messages" routerLinkActive="active">Message</a>
             </li>
         </ul>
 
-        <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
-            <a class="dropdown-toggle text-light" dropdownToggle>Welcome user</a>
+        <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
+            <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.token}}</a>
             <div class="dropdown-menu mt-3" *dropdownMenu>
                 <a class="dropdown-item">Edit Profile</a>
                 <div class="dropdown-divider"></div>
