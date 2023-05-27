@@ -10,11 +10,13 @@ using System.Text;
 using API.DTOs;
 using Microsoft.EntityFrameworkCore;
 using API.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    //y[Authorize]
     public class AccountController : ControllerBase
     {
         public DataContext _context;
