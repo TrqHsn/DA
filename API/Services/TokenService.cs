@@ -23,6 +23,7 @@ namespace API.Services
         {
             var claims =new List<Claim>
             {
+                //We can add more data here which will be sent when a succesfull token will be created.
                 new Claim(JwtRegisteredClaimNames.NameId, user.UserName)
             };
             var creds =new SigningCredentials (_key, SecurityAlgorithms.HmacSha512Signature);

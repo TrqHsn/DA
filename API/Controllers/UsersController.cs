@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
 
@@ -27,7 +28,7 @@ namespace API.Controllers
             _iur = iur;
         }
 
-        [HttpGet]
+        [HttpGet ]
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
         {
             var users = await _iur.GetMembersAsync();
