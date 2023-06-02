@@ -5,6 +5,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxSpinner, NgxSpinnerModule } from "ngx-spinner";
 
 
 
@@ -18,14 +19,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     }),
     TabsModule.forRoot(),
     NgxGalleryModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+
   ],
   exports: [
     BsDropdownModule,
     ToastrModule, 
     TabsModule,
     NgxGalleryModule,
-    FontAwesomeModule
+    FontAwesomeModule,    
   ]
 })
 export class SharedModule { }

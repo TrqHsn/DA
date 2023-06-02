@@ -45,6 +45,7 @@ export class MemberDetailComponent implements OnInit{
     this.ms.getMember(this.route.snapshot.paramMap.get('username'))
     .subscribe(res=>{
       this.member =res;
+      //console.log(res);
       this.galleryImages = this.getImages();
     })
   }

@@ -9,9 +9,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AuthGuard implements CanActivate {
   
-  constructor(private aS: AccountService, private toastr: ToastrService){}
+  constructor(private as: AccountService, private toastr: ToastrService){}
   canActivate(): Observable<boolean> {
-    return this.aS.currentUser$.pipe(
+    return this.as.currentUser$.pipe(
       map(user=> {
       if (user) return true;
       this.toastr.error("You are not logged in!")
